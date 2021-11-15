@@ -1,0 +1,7 @@
+{
+  "name": "commaful-new",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

@@ -1,0 +1,7 @@
+import { MutationTree } from 'vuex';
+import { AuthState } from './types';
+
+export const mutations: MutationTree<AuthState> = {
+  setUser: (state: AuthState) => {
+  },
+};
