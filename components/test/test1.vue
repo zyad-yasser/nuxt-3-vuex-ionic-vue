@@ -1,0 +1,25 @@
+<template>
+<div>
+ <ion-list>
+    <ion-list-header>Ionic</ion-list-header>
+    <ion-item button>Learn Ionic</ion-item>
+    <ion-item button>Documentation</ion-item>
+    <ion-item button>Showcase</ion-item>
+    <ion-item button>GitHub Repo</ion-item>
+    <ion-item lines="none" detail="false" button onClick="dismissPopover()"
+      >Close</ion-item
+    >
+  </ion-list>
+</div>
+ 
+</template>
+
+<script lang="ts">
+import { IonButton } from '@ionic/vue';
+
+export default defineComponent({
+  components: {
+    IonButton,
+  },
+});
+</script>

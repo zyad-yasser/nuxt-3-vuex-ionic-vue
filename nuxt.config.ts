@@ -5,5 +5,11 @@ export default defineNuxtConfig({
 	ssr: false,
   css: [
     '~/styles/global.sass',
+  ],
+  meta: [
+    {
+      name: 'color-scheme',
+      content: 'light',
+    }
   ]
 });

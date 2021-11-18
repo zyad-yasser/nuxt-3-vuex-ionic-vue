@@ -1,17 +1,17 @@
 import { Storage } from '@capacitor/storage';
 
 const storage = {
-  async set(key, data) {
+  async set(key: string, data: any) {
     await Storage.set({
       key,
       value: JSON.stringify(data)
     });
   },
-  async get(key) {
-    const ret = await Storage.get({ key });
-    return JSON.parse(ret.value);
+  async get(key: string) {
+    const { value } = await Storage.get({ key });
+    return JSON.parse(value || '');
   },
-  async remove(key) {
+  async remove(key: string) {
     await Storage.remove({ key });
   },
   async clear() {

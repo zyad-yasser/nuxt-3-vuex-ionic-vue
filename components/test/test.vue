@@ -1,5 +1,8 @@
 <template>
+<div>
   <ion-button color="primary">Primary</ion-button>
+</div>
+  
 </template>
 
 <script lang="ts">

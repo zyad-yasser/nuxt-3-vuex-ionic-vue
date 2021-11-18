@@ -1,15 +1,13 @@
 import { KeepAwake } from '@capacitor-community/keep-awake';
 
+const { keepAwake, allowSleep } = KeepAwake;
+
 const sleep = {
   async keepAwake() {
-    try {
-      await KeepAwake.keepAwake();
-    } catch {}
+    return keepAwake();
   },
   async allowSleep() {
-    try {
-      await KeepAwake.allowSleep();
-    } catch {}
+    return allowSleep();
   }
 }
 
