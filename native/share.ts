@@ -2,15 +2,13 @@ import { Share } from '@capacitor/share';
 
 const { share: sharer } = Share;
 
-const share = {
+export const share = {
   async share(title: string, text: string, url: string, dialogTitle: string) {
     return sharer({
       title,
       text,
       url,
-      dialogTitle
+      dialogTitle,
     });
-  }
+  },
 };
-
-export { share }

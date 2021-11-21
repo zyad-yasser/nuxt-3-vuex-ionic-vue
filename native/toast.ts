@@ -30,7 +30,7 @@ const runIonicToast = async (
   return toast.present();
 };
 
-const toast = {
+export const toast = {
   async show(
     text: string,
     type = DEFAULT_TOAST_TYPE,
@@ -44,5 +44,3 @@ const toast = {
     return runIonicToast(text, color, duration, position as IonicToastPosition);
   },
 };
-
-export { toast };

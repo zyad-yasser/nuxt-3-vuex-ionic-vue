@@ -1,6 +1,6 @@
 import { popoverController } from '@ionic/vue'
 
-const popovers = {
+export const popovers = {
   async open(event: any, incomingComponent:any, props: any = {}) {
     const component = defineComponent({
       props,
@@ -17,5 +17,3 @@ const popovers = {
     return popover;
   }
 }
-
-export { popovers }

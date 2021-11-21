@@ -1,6 +1,6 @@
 import { Storage } from '@capacitor/storage';
 
-const storage = {
+export const storage = {
   async set(key: string, data: any) {
     await Storage.set({
       key,
@@ -17,6 +17,4 @@ const storage = {
   async clear() {
     await Storage.clear();
   }
-}
-
-export { storage };
+};

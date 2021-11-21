@@ -1,10 +1,10 @@
-import { App } from '@capacitor/app';
+import { App, AppLaunchUrl } from '@capacitor/app';
 
-const app = {
-  getLaunchUrl() {
+export const app = {
+  getLaunchUrl(): Promise<AppLaunchUrl | undefined> {
     return App.getLaunchUrl();
   },
-  addAppLaunchListener(cbHandler = null) {
+  addAppLaunchListener(cbHandler: any = null) {
     App.addListener("appUrlOpen", (data) => {
       if (cbHandler) {
         cbHandler(data);
@@ -14,5 +14,3 @@ const app = {
   addListener: App.addListener,
   exitApp: App.exitApp,
 }
-
-export { app }

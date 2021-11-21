@@ -2,7 +2,7 @@ import { KeepAwake } from '@capacitor-community/keep-awake';
 
 const { keepAwake, allowSleep } = KeepAwake;
 
-const sleep = {
+export const sleep = {
   async keepAwake() {
     return keepAwake();
   },
@@ -10,5 +10,3 @@ const sleep = {
     return allowSleep();
   }
 }
-
-export { sleep }
