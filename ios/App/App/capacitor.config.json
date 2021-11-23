@@ -1,0 +1,49 @@
+{
+	"appId": "com.commaful.Commaful",
+	"appName": "Commaful",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "www",
+	"loggingBehavior": "debug",
+	"ios": {
+		"minVersion": "13.0"
+	},
+	"cordova": {
+		"preferences": {
+			"PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app uses your photo library",
+			"PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app saves images your photo library"
+		}
+	},
+	"plugins": {
+		"WebView": {
+			"scrollEnabled": false
+		},
+		"TwitterPlugin": {
+			"consumerKey": "c4uQPXwMn2GvIIUhgMEjieANy",
+			"consumerSecret": "l8BLL0yE3HrBmAha6jgGO0sN1FSXugInVppQ3fYlhzNFtH8WL3"
+		},
+		"Keyboard": {
+			"resize": "native"
+		},
+		"SplashScreen": {
+			"launchShowDuration": 3000,
+			"launchAutoHide": true,
+			"backgroundColor": "#FFF",
+			"androidSplashResourceName": "splash",
+			"androidScaleType": "CENTER_CROP",
+			"androidSpinnerStyle": "small",
+			"iosSpinnerStyle": "small",
+			"spinnerColor": "#00c6c6",
+			"showSpinner": true,
+			"splashFullScreen": true,
+			"splashImmersive": true
+		},
+		"PushNotifications": {
+			"presentationOptions": [
+				"badge",
+				"sound",
+				"alert"
+			]
+		}
+	}
+}

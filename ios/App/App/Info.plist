@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Commaful</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.getcapacitor.capacitor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>capacitor</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb481152312068304</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>481152312068304</string>
+	<key>FacebookDisplayName</key>
+	<string>Commaful</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>facebook</string>
+		<string>fb</string>
+		<string>instagram</string>
+		<string>fbapi</string>
+		<string>fbauth2</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>To add background images to your stories and customize your profile</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Always allow Geolocation?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Geolocation?</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>For saving story content on your device</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For uploading images when creating stories, or downloading story videos</string>
+	<key>SocialSharingExcludeActivities</key>
+	<array>
+		<string>com.apple.UIKit.activity.Instagram</string>
+		<string>com.apple.UIKit.activity.Whatsapp</string>
+		<string>com.apple.UIKit.activity.PostToTwitter</string>
+		<string>com.apple.UIKit.activity.PostToFlickr</string>
+		<string>com.apple.UIKit.activity.PostToWeibo</string>
+		<string>com.apple.UIKit.activity.PostToVimeo</string>
+		<string>com.apple.UIKit.activity.TencentWeibo</string>
+		<string>com.apple.UIKit.activity.Message</string>
+		<string>com.apple.UIKit.activity.Mail</string>
+		<string>com.apple.UIKit.activity.Print</string>
+		<string>com.apple.UIKit.activity.CopyToPasteboard</string>
+		<string>com.apple.UIKit.activity.AssignToContact</string>
+		<string>com.apple.UIKit.activity.SaveToCameraRoll</string>
+		<string>com.apple.UIKit.activity.AddToReadingList</string>
+		<string>com.apple.UIKit.activity.AirDrop</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchscreenCommaful</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+</dict>
+</plist>

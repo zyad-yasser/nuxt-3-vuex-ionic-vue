@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Commaful</string>
+    <string name="title_activity_main">Commaful</string>
+    <string name="package_name">com.commaful.commaful</string>
+    <string name="custom_url_scheme">com.commaful.commaful</string>
+    <string name="facebook_app_id">481152312068304</string>
+    <string name="fb_login_protocol_scheme">fb481152312068304</string>
+</resources>

@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+import com.android.build.OutputFile
+
+def enableSeparateBuildPerCPUArchitecture = true
+def enableProguardInReleaseBuilds = false
+
+def keyStorePassword = file('keystore.credentials')  // do not commit this file
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.commaful.commaful"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 4500035
+        versionName "2.01"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        debug {
+            storeFile file("commaful-release.keystore")
+            storePassword keyStorePassword.text
+            keyAlias "commaful"
+            keyPassword keyStorePassword.text
+        }
+        release {
+            storeFile file("commaful-release.keystore")
+            storePassword keyStorePassword.text
+            keyAlias "commaful"
+            keyPassword keyStorePassword.text
+        }
+    }
+    splits {
+        abi {
+            reset()
+            enable enableSeparateBuildPerCPUArchitecture
+            universalApk true  // If true, also generate a universal APK
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+      variant.outputs.each { output ->
+        // For each separate APK per architecture, set a unique version code as described here:
+        // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
+        def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
+        def abi = output.getFilter(OutputFile.ABI)
+        if (abi != null) {  // null for the universal-debug, universal-release variants
+          output.versionCodeOverride =
+            250000 + defaultConfig.versionCode * versionCodes.get(abi)
+        }
+      }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.warn("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}

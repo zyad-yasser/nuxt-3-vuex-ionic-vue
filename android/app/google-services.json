@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "178009269103",
+    "project_id": "commaful-24868",
+    "storage_bucket": "commaful-24868.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178009269103:android:b5562ec4c6841b61bbbe9a",
+        "android_client_info": {
+          "package_name": "com.commaful.commaful"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178009269103-5q4kbdtuhupq79f2oiqmudmkcsm5sht7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgR33nJvpsOBhEipVNTybGlxR_9DDMh8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178009269103-5q4kbdtuhupq79f2oiqmudmkcsm5sht7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "178009269103-48tnrpbhvoaeo8enn3to9sdsd4u7e8d2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.commaful.Commaful"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

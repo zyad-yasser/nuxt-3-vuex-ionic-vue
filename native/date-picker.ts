@@ -1,4 +1,4 @@
-import { moment } from 'moment';
+import * as moment from 'moment';
 import { DatePicker } from '@capacitor-community/date-picker'
 
 const selectedTheme = "light";

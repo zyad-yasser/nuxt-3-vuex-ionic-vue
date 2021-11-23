@@ -11,6 +11,7 @@ import {
 } from '@ionic/vue';
 
 export default defineComponent({
+  name: 'Test',
   components: {
     IonButton,
   }
